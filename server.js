@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || "" });
-var urlencodedParser = bodyParser.urlencoded({ extended: false });
+const urlencodedParser = bodyParser.urlencoded({ extended: false });
 const app = express();
 
 app.use(cors());
