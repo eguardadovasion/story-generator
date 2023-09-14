@@ -1,16 +1,39 @@
-<mat-form-field appearance="fill">
-    
-    <mat-label>Input</mat-label>
-    <input matInput>
-  </mat-form-field>
-  <mat-form-field appearance="fill">
-    <mat-label>Select</mat-label>
-    <mat-select>
-      <mat-option value="one">First option</mat-option>
-      <mat-option value="two">Second option</mat-option>
-    </mat-select>
-  </mat-form-field>
-  <mat-form-field appearance="fill">
-    <mat-label>Textarea</mat-label>
-    <textarea matInput></textarea>
-  </mat-form-field>
+<form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Hero</mat-label>
+      <input matInput placeholder="Ex. " value="">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Problem</mat-label>
+      <textarea matInput placeholder="Ex. ..."></textarea>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Guide</mat-label>
+        <textarea matInput placeholder="Ex. ..."></textarea>
+      </mat-form-field>
+
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Plan</mat-label>
+        <textarea matInput placeholder="Ex. ..."></textarea>
+      </mat-form-field>
+
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Call to action</mat-label>
+        <textarea matInput placeholder="Ex. ..."></textarea>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Consequence(s) of not taking action</mat-label>
+        <textarea matInput placeholder="Ex. ..."></textarea>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Consequence(s) or taking action</mat-label>
+        <textarea matInput placeholder="Ex. ..."></textarea>
+      </mat-form-field>
+      <button mat-raised-button color="primary">Generate</button>
+  </form>
