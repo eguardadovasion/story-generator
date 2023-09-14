@@ -25,6 +25,7 @@ export class StoryFormComponent implements OnInit {
   }
 
   onSubmit() {
+    console.log("form")
     if (this.myForm.valid) {
       // Handle form submission here
       console.log('Form submitted:', this.myForm.value);

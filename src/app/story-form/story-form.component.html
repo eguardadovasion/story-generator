@@ -1,4 +1,4 @@
-<form class="example-form">
+<form class="example-form" [formGroup]="myForm" (ngSubmit)="onSubmit()">
     <mat-form-field class="example-full-width">
       <mat-label>Hero</mat-label>
       <input matInput placeholder="Ex. " value="">
@@ -35,5 +35,5 @@
         <mat-label>Consequence(s) or taking action</mat-label>
         <textarea matInput placeholder="Ex. ..."></textarea>
       </mat-form-field>
-      <button mat-raised-button color="primary">Generate</button>
+      <button mat-raised-button color="primary" type="submit">Generate</button>
   </form>
