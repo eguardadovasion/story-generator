@@ -11,11 +11,15 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 
 import {MatInputModule} from '@angular/material/input';
+import { StepperFormComponent } from './stepper-form/stepper-form.component';
+import {MatStepperModule} from '@angular/material/stepper';
+import {MatDividerModule} from '@angular/material/divider';
 
 @NgModule({
   declarations: [
     AppComponent,
-    StoryFormComponent
+    StoryFormComponent,
+    StepperFormComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +30,9 @@ import {MatInputModule} from '@angular/material/input';
     MatSelectModule,
     MatInputModule,
     ReactiveFormsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatStepperModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent, StoryFormComponent]
