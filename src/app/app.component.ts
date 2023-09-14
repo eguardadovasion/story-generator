@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from './api.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'story-generator';
+  message: any;
+  constructor(private apiSerivice: ApiService) { };
+  ngOnInit() {
+    this.apiSerivice.getMessage().subscribe(data => {
+      this.message = data;
+    });
+  }
 }
