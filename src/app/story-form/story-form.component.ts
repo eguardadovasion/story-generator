@@ -34,22 +34,22 @@ export class StoryFormComponent implements OnInit {
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
     });
-    this.hero = 'Andy';
-    this.problem = 'the unsustainable cost of print servers';
-    this.guide = 'Vasion';
-    this.plan = 'immediately implement the PrinterLogic software suite';
-    this.actionCall = 'sign up for a free 30-day trial today';
-    this.consequencePos = 'a flourishing business due to simplified printing and the freeing of financial resources';
-    this.consequenceNeg = 'continuing the struggle of trying to stay competitive without enough resources';
-    this.company = 'Acme, Inc';
-    this.complexity = 'low';
-    this.genre = 'space opera';
-    this.style = 'Isaac Asimov';
-    this.industry = 'medical devices';
-    this.tone = 'friendly';
-    this.phrase = 'Yeah, buddy!';
-    this.lang = 'english';
-    this.story = {"message":'The story goes like this'};
+    this.hero = '';
+    this.problem = '';
+    this.guide = '';
+    this.plan = '';
+    this.actionCall = '';
+    this.consequencePos = '';
+    this.consequenceNeg = '';
+    this.company = '';
+    this.complexity = '';
+    this.genre = '';
+    this.style = '';
+    this.industry = '';
+    this.tone = '';
+    this.phrase = '!';
+    this.lang = '';
+    this.story = null;
   }
 
   ngOnInit(): void {
