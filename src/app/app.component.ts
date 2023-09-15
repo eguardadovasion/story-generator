@@ -9,9 +9,9 @@ import { ApiService } from './api.service';
 export class AppComponent {
   title = 'story-generator';
   message: any;
-  constructor(private apiSerivice: ApiService) { };
+  constructor(private apiService: ApiService) { };
   ngOnInit() {
-    this.apiSerivice.getMessage().subscribe(data => {
+    this.apiService.getMessage().subscribe(data => {
       this.message = data;
     });
   }

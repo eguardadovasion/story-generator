@@ -9,6 +9,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSelectModule} from '@angular/material/select';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
+import { FormsModule } from '@angular/forms';
+import {MatSliderModule} from '@angular/material/slider';
 
 import {MatInputModule} from '@angular/material/input';
 import { StepperFormComponent } from './stepper-form/stepper-form.component';
@@ -30,6 +32,8 @@ import {MatDividerModule} from '@angular/material/divider';
     MatSelectModule,
     MatInputModule,
     ReactiveFormsModule,
+    FormsModule,
+    MatSliderModule,
     MatButtonModule,
     MatStepperModule,
     MatDividerModule
