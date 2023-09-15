@@ -101,7 +101,6 @@ export class StoryFormComponent implements OnInit {
     
      await this.apiService.generateStory(query).subscribe(data => {
       this.story = data;
-      console.log(data);
     });
     
     return this.story;

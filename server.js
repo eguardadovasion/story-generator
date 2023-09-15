@@ -17,10 +17,7 @@ app.get("/api/message", (req, res) => {
 app.post("/api/stories", urlencodedParser, async (req, res) => {
   try {
     const message = req.body.message;
-    console.log(req.body);
     const gptResponse = await generateStory(message);
-    
-    console.log("message");
     res.status(200).json({ message: gptResponse });
   } catch (error) {
     res.status(500).json({ error: error.message });
