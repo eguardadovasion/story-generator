@@ -21,7 +21,7 @@ export class StoryFormComponent implements OnInit {
   consequenceNeg: string;
   company: string;
   length: number = 60;
-  complexity: string;
+  complexity: string = 'High';
   genre: string;
   style: string;
   industry: string;
@@ -72,7 +72,7 @@ export class StoryFormComponent implements OnInit {
     query += '. The consequence of taking action is ' + this.consequencePos;
     query += '. The name of the company the hero works for is ' + this.company;
     if (this.length > 0) {
-      query += '. The length of the story is ' + this.length + ' seconds. ';
+      query += '. The story should take no longer than ' + this.length + ' seconds to read. ';
     }
     if (this.genre !== '') {
       query += 'The genre of the story is' + this.genre;
