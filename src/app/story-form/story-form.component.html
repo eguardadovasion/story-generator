@@ -1,84 +1,111 @@
-<form class="example-form" [formGroup]="myForm" (ngSubmit)="onSubmit()">
-    <mat-form-field class="example-full-width">
-      <mat-label>Hero</mat-label>
-      <input matInput placeholder="Ex. " value="">
+<div class="fieldset-container">
+  <fieldset class="fieldset">
+    <legend class="form-label">SB7 Components</legend>
+    <div class="form-group">
+    <mat-form-field appearance="fill">
+      <mat-label>The Hero</mat-label>
+      <input  [(ngModel)]="hero" matInput>
     </mat-form-field>
   
-    <mat-form-field class="example-full-width">
-      <mat-label>Problem</mat-label>
-      <textarea matInput placeholder="Ex. ..."></textarea>
+    <mat-form-field appearance="fill">
+      <mat-label>The Problem</mat-label>
+      <textarea [(ngModel)]="problem" matInput></textarea>
     </mat-form-field>
-
-    <mat-form-field class="example-full-width">
-        <mat-label>Guide</mat-label>
-        <textarea matInput placeholder="Ex. ..."></textarea>
-      </mat-form-field>
-
-
-    <mat-form-field class="example-full-width">
-        <mat-label>Plan</mat-label>
-        <textarea matInput placeholder="Ex. ..."></textarea>
-      </mat-form-field>
-
-
-    <mat-form-field class="example-full-width">
-        <mat-label>Call to action</mat-label>
-        <textarea matInput placeholder="Ex. ..."></textarea>
-      </mat-form-field>
-
-      <mat-form-field class="example-full-width">
-        <mat-label>Consequence(s) of not taking action</mat-label>
-        <textarea matInput placeholder="Ex. ..."></textarea>
-      </mat-form-field>
-
-      <mat-form-field class="example-full-width">
-        <mat-label>Consequence(s) or taking action</mat-label>
-        <textarea matInput placeholder="Ex. ..."></textarea>
-      </mat-form-field>
-      <mat-divider></mat-divider>
-      <mat-form-field class="example-full-width">
-        <mat-label>Name of the company the hero works for
-        </mat-label>
-        <input matInput placeholder="Ex. " value="">
-      </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>The Guide</mat-label>
+      <input [(ngModel)]="guide" matInput>
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>The Plan</mat-label>
+      <input [(ngModel)]="plan" matInput>
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Call to Action</mat-label>
+      <textarea [(ngModel)]="actionCall" matInput></textarea>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Consequence of not taking action</mat-label>
+      <textarea [(ngModel)]="consequenceNeg"  matInput></textarea>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Consequence of taking action</mat-label>
+      <textarea [(ngModel)]="consequencePos"  matInput></textarea>
+    </mat-form-field>
     
-      <mat-form-field class="example-full-width">
-        <mat-label>Length (in minutes and/or seconds)</mat-label>
-        <textarea matInput placeholder="Ex. ..."></textarea>
-      </mat-form-field>
+  </div>
+  </fieldset>
   
-      <mat-form-field class="example-full-width">
-          <mat-label>Complexity (low, medium, high)</mat-label>
-          <textarea matInput placeholder="Ex. ..."></textarea>
-        </mat-form-field>
-  
-  
-      <mat-form-field class="example-full-width">
-          <mat-label>Genre</mat-label>
-          <textarea matInput placeholder="Ex. ..."></textarea>
-        </mat-form-field>
-  
-  
-      <mat-form-field class="example-full-width">
-          <mat-label>Industry (of the real-life hero you’re addressing)</mat-label>
-          <textarea matInput placeholder="Ex. ..."></textarea>
-        </mat-form-field>
-  
-        <mat-form-field class="example-full-width">
-          <mat-label>Tone</mat-label>
-          <textarea matInput placeholder="Ex. ..."></textarea>
-        </mat-form-field>
-        <mat-divider></mat-divider>
-        <mat-form-field class="example-full-width">
-          <mat-label>Custom sentence/phrase/word to include (click to add more)
-        </mat-label>
-          <textarea matInput placeholder="Ex. ..."></textarea>
-        </mat-form-field>
+  <fieldset class="fieldset">
+    <legend class="form-label">Delivery and Tone:</legend>
+    <div class="form-group">
+    <mat-form-field appearance="fill">
+      <mat-label>Name of the company the hero works for</mat-label>
+      <input [(ngModel)]="company" matInput>
+    </mat-form-field>
+    <div style="color: white;">
+        <p>Length of time: {{ length }} seconds</p>
+      </div>
+    <mat-slider max="60" discrete showTickMarks #slider (change)="onSliderChange(slider.value)" [(ngModel)]="length" >
+      <input matSliderThumb >>
+    </mat-slider>
+    
+    <mat-form-field appearance="fill">
+      <mat-label>Genre</mat-label>
+      <input [(ngModel)]="genre" matInput>
+    </mat-form-field>
 
-        <mat-form-field class="example-full-width">
-            <mat-label>Language (defaults to English)
-          </mat-label>
-            <textarea matInput placeholder="Ex. ..."></textarea>
-          </mat-form-field>
-      <button mat-raised-button color="primary" type="submit">Generate</button>
-  </form>
+    <mat-form-field appearance="fill">
+      <mat-label>In the Style of:</mat-label>
+      <input [(ngModel)]="style" matInput>
+    </mat-form-field>
+  
+  <mat-form-field appearance="fill">
+      <mat-label [(ngModel)]="complexity">Complexity </mat-label>
+      <mat-select>
+        <mat-option value="low">Low</mat-option>
+        <mat-option value="medium">Medium</mat-option>
+        <mat-option value="high">High</mat-option>
+      </mat-select>
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Industry</mat-label>
+      <input [(ngModel)]="industry"  matInput>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Tone</mat-label>
+      <input [(ngModel)]="tone" matInput>
+    </mat-form-field>
+  </div>
+  </fieldset>
+  
+  <fieldset class="fieldset">
+    <legend class="form-label">Miscellaneous</legend>
+    <div class="form-group">
+    <mat-form-field appearance="fill">
+      <mat-label>Custom sentence/phrase/word to include</mat-label>
+      <textarea [(ngModel)]="phrase"  matInput></textarea>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Language</mat-label>
+      <mat-select [(ngModel)]="lang">
+        <mat-option value="english">English</mat-option>
+        <mat-option value="spanish">Spanish</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  </fieldset>
+  </div>
+  <div>
+    <button mat-raised-button color="primary"(click)="sendQuery()">Generate SB7</button>
+  </div>
+  <div style="margin-top: 25px;">
+  <fieldset class="fieldset">
+  <p *ngIf="story" style="color: white;">
+    SB7: {{ story.message }}
+  </p>
+</fieldset>
+</div>

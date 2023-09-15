@@ -9,4 +9,10 @@ export class ApiService {
     getMessage() {
         return this.http.get('http://localhost:3000/api/message');
     }
+    generateStory(query: string){
+        var data = "message=" + encodeURIComponent(query);
+        return this.http.post('http://localhost:3000/api/stories', data, {headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+           }});
+    }
 }
