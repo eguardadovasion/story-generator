@@ -34,21 +34,21 @@ export class StoryFormComponent implements OnInit {
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
     });
-    this.hero = '';
-    this.problem = '';
-    this.guide = '';
-    this.plan = '';
-    this.actionCall = '';
-    this.consequencePos = '';
-    this.consequenceNeg = '';
-    this.company = '';
-    this.complexity = '';
-    this.genre = '';
-    this.style = '';
-    this.industry = '';
-    this.tone = '';
-    this.phrase = '!';
-    this.lang = '';
+    this.hero = 'Sam Altmann';
+    this.problem = 'Losing valuable development time doing mundane business processes';
+    this.guide = 'Vasion';
+    this.plan = 'Automate business processes with Vasion Suite';
+    this.actionCall = 'Sign up today for a free trial of Vasion Suite';
+    this.consequencePos = 'ChatGPT reaches the singularity';
+    this.consequenceNeg = 'ChatGPT is shut down by Google Bard';
+    this.company = 'OpenAI';
+    this.complexity = 'High';
+    this.genre = 'High Fantasy';
+    this.style = 'Tolkein';
+    this.industry = 'Software';
+    this.tone = 'Inspiring';
+    this.phrase = 'All your base are belong to us';
+    this.lang = 'English';
     this.story = null;
   }
 
